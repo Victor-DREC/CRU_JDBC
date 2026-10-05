@@ -2,7 +2,7 @@ package com.krakdev.entidades;
 
 public class Vehiculo {
 	
-	private String palca;
+	private String placa;
 	private String marca;
 	private String modelo;
 	private int anio;
@@ -16,10 +16,10 @@ public class Vehiculo {
 	}
 	
 	
-	public Vehiculo(String palca, String marca, String modelo, int anio, double precio, String color,
+	public Vehiculo(String placa, String marca, String modelo, int anio, double precio, String color,
 			boolean disponible) {
 		super();
-		this.palca = palca;
+		this.placa = placa;
 		this.marca = marca;
 		this.modelo = modelo;
 		this.anio = anio;
@@ -32,17 +32,17 @@ public class Vehiculo {
 	
 	@Override
 	public String toString() {
-		return "Vehiculo [palca=" + palca + ", marca=" + marca + ", modelo=" + modelo + ", anio=" + anio + ", precio="
+		return "Vehiculo [palca=" + placa + ", marca=" + marca + ", modelo=" + modelo + ", anio=" + anio + ", precio="
 				+ precio + ", color=" + color + ", disponible=" + disponible + "]";
 	}
 
 
 
 	public String getPalca() {
-		return palca;
+		return placa;
 	}
-	public void setPalca(String palca) {
-		this.palca = palca;
+	public void setPalca(String placa) {
+		this.placa = placa;
 	}
 	public String getMarca() {
 		return marca;
