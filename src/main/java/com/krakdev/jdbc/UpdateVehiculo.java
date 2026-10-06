@@ -22,19 +22,20 @@ public class UpdateVehiculo {
 			
 				con = Conexion.getConnection();
 				String sql = """
-							UPDATE vehiculos SET marca = ?, modelo = ?, anio = ?, precio = ?, color = ?, disponible = ?
+							UPDATE vehiculos SET marca = ?, modelo = ?, anio = ?, precio = ?, color = ?, disponible = ?, kilometraje = ?
 							WHERE placa = ? 
 						"""; 
 				
 				ps = con.prepareStatement(sql);
 				
-				ps.setString(1, "Toyota");
-				ps.setString(2, "GT-85");
+				ps.setString(1, "Ferrari");
+				ps.setString(2, "F85");
 				ps.setInt(3, 1985);
 				ps.setDouble(4, 90000);
 				ps.setString(5, "Negro");
 				ps.setBoolean(6, false);
-				ps.setString(7, "DDD-123");
+				ps.setInt(7, 1500);
+				ps.setString(8, "CCC-123");
 				
 				int filas = ps.executeUpdate();	
 				log.info("Vehiculos editados: "+filas);

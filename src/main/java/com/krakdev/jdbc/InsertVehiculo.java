@@ -19,8 +19,8 @@ public class InsertVehiculo {
 		PreparedStatement ps = null;
 		
 		String sql = """
-				INSERT INTO vehiculos(placa, marca, modelo, anio, precio, color, disponible)
-				VALUES(?,?,?,?,?,?,?)
+				INSERT INTO vehiculos(placa, marca, modelo, anio, precio, color, disponible, kilometraje)
+				VALUES(?,?,?,?,?,?,?,?)
 			""";
 		
 		try {
@@ -29,13 +29,14 @@ public class InsertVehiculo {
 			ps = con.prepareStatement(sql);
 			
 
-			ps.setString(1, "DDD-123");
-			ps.setString(2, "Toyota");
-			ps.setString(3, "GT-85");
-			ps.setInt(4, 1985);
-			ps.setDouble(5, 90000);
-			ps.setString(6, "Negro");
+			ps.setString(1, "FFF-123");
+			ps.setString(2, "Ferrari");
+			ps.setString(3, "296 GT3");
+			ps.setInt(4, 2023);
+			ps.setDouble(5, 650000);
+			ps.setString(6, "Rojo Corsa");
 			ps.setBoolean(7, true);
+			ps.setInt(8, 1000);
 			
 			int filas = ps.executeUpdate();	
 			log.info("Vehiculos agregados: "+filas);
