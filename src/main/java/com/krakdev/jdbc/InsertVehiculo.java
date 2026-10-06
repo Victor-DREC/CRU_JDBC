@@ -29,15 +29,15 @@ public class InsertVehiculo {
 			ps = con.prepareStatement(sql);
 			
 
-			ps.setString(1, "NNN-123");
+			ps.setString(1, "DDD-123");
 			ps.setString(2, "Toyota");
 			ps.setString(3, "GT-85");
 			ps.setInt(4, 1985);
 			ps.setDouble(5, 90000);
 			ps.setString(6, "Negro");
 			ps.setBoolean(7, true);
-
-			int filas = ps.executeUpdate();
+			
+			int filas = ps.executeUpdate();	
 			log.info("Vehiculos agregados: "+filas);
 			
 		}catch(SQLException e){

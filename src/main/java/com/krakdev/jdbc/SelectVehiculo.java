@@ -41,6 +41,7 @@ public class SelectVehiculo {
 				log.info("Vehiculo [palca=" + placa + ", marca=" + marca + ", modelo=" + modelo + ", anio=" + anio + ", precio="
 						+ precio + ", color=" + color + ", disponible=" + disponible + "]");
 			}
+			
 
 		} catch (Exception e) {
 

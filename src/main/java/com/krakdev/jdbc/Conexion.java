@@ -32,7 +32,6 @@ public class Conexion {
 				//es para quitar el error de retornar algo al metodo
 				throw new RuntimeException("No se pudo conectar", e);
 			}
-			
 		}
 
 }

@@ -34,8 +34,10 @@ public class UpdateVehiculo {
 				ps.setDouble(4, 90000);
 				ps.setString(5, "Negro");
 				ps.setBoolean(6, false);
-				ps.setString(7, "NNN-123");
+				ps.setString(7, "DDD-123");
 				
+				int filas = ps.executeUpdate();	
+				log.info("Vehiculos editados: "+filas);
 			
 			}catch(Exception e) {
 				log.error("Error al actualizar "+e.getMessage());

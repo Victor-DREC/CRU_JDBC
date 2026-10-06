@@ -27,6 +27,9 @@ private static final Logger log = LogManager.getLogger(DeleteVehiculo.class);
 			
 			ps.setString(1, "NNN-123");
 			
+			int filas = ps.executeUpdate();	
+			log.info("Vehiculos eliminados: "+filas);
+			
 			
 		}catch(Exception e) {
 			log.info("Error al eliminar: "+e.getMessage());
